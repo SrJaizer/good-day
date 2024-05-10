@@ -12,6 +12,9 @@ export default function Home() {
       <Link href="/mensagem" className={styles.dailyMessageButton}>
         Mensagem Diária
       </Link>
+      <Link href="/feed" className={styles.userfeed}>
+        feed
+      </Link>
     </main>
   );
 }
