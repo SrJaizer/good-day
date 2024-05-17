@@ -1,5 +1,5 @@
+import styles from './page.module.css';
 import React from 'react';
-import styles from './Page.module.css';
 
 const Page = () => {
     const messages = [
@@ -10,17 +10,20 @@ const Page = () => {
     ];
 
     return (
-        <div className={styles.chatWindow}>
-            <div className={styles.header}>Good Day</div>
+        <main className={styles.feedContainer}>
+            <img src="/location-icon.svg" alt="Icone de localização" />
             <ul className={styles.messagesList}>
                 {messages.map((message, index) => (
-                    <li key={index} className={styles.message}>
-                        <div className={styles.messageSender}>{message.name}</div>
-                        <div className={styles.messageText}>{message.text}</div>
+                    <li key={index} className={styles.messageCard}>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnj2TWYskM8Or0ykoHKfKbf8YulsCWgTptlp1XdTjexw&s" alt="Imagem de perfil" className={styles.profileImage}/>
+                        <div className={styles.messageSender}>
+                            <h2>{message.name}</h2>
+                            <div className={styles.messageText}>{message.text}</div>
+                        </div>
                     </li>
                 ))}
             </ul>
-        </div>
+        </main>
     );
 };
 
